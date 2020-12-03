@@ -7,7 +7,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="css/pure.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 
 </head>
 <body>
@@ -47,7 +49,7 @@
 
 
 	<!--  Hero Section  -->
-	<section class="hero" id="hero">
+	<section  class="hero" id="hero">
 		<div class="container">
 			<div class="caption">
 				<h1 class="text-uppercase  animated wow fadeInLeft">Creators of Robofriends and SmartBrain</h1>
@@ -74,7 +76,7 @@
 
 	<!--  Featured On Section  -->
 	<section class="featured_on">
-		<div class="container">
+		<div  class="container">
 			<ul class="list-unstyled text-center clearfix">
 				<li class="col-xs-6 col-sm-6 col-md-3 animated wow fadeInDown">
 					<img src="img/google_logo.png" alt="" title="">
@@ -100,7 +102,7 @@
 
 	<!--  About Section  -->
 	<section class="about" id="about">
-		<div class="container">
+		<div id="about" class="container">
 			<div class="row">
 				<div class="col-md-6 text-center animated wow fadeInLeft">
 					<div class="iphone">
@@ -152,7 +154,7 @@
 
 	<!--  App Features Section  -->
 	<section class="app_features" id="app_features">
-		<div class="container">
+		<div id="app_features" class="container">
 
 			<div class="row text-center">
 				<div class="col-sm-4 col-md-4 details animated wow fadeInDown" data-wow-delay="0s">
@@ -200,7 +202,7 @@
 
 	<!--  Testimonials Section  -->
 	<section class="testimonials animated wow fadeIn" id="testimonials" data-wow-duration="2s">
-		<div class="container">
+		<div id="testimonials" class="container">
 			<div class="testimonials_list">
 
 				<ul class="list-unstyled text-center slides clearfix" id="tslider">
@@ -282,14 +284,36 @@
 
 
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/ajaxchimp.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
-	<script type="text/javascript" src="js/parallax.js"></script>
-	<script type="text/javascript" src="js/nicescroll.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/scrollTo.js"></script>
-	
+
+<!--carico altri css-->
+<script type="text/javascript">
+	let loadStylesheet = src => {
+		if(document.createStylesheet) {
+			document.createStylesheet(src)
+		} else {
+			const stylesheet = document.createElement('link');
+			stylesheet.href = src;
+			stylesheet.type = 'text/css';
+			stylesheet.rel = 'stylesheet';
+			document.getElementsByTagName('head')[0].appendChild(stylesheet);
+		}
+	}
+
+	window.onload = function() {
+		console.log('window done!');
+		loadStylesheet('css/owl.transitions.css');
+		loadStylesheet('css/owl.carousel.css');
+	}
+</script>
+
+<!-- tolgo gli scripts
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/ajaxchimp.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+-->
+
 </body>
 </html>
